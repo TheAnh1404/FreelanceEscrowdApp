@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Meteors } from "@/components/ui/meteors";
 import Navbar from "@/components/Navbar";
-import ContractUI from "@/components/Contract";
+import EscrowDashboard from "@/components/EscrowDashboard";
 import {
   connectWallet,
   getWalletAddress,
@@ -63,85 +63,43 @@ export default function Home() {
         isConnecting={isConnecting}
       />
 
-      {/* Hero + Content */}
-      <main className="relative z-10 flex flex-1 w-full max-w-5xl mx-auto flex-col items-center px-6 pt-10 pb-16">
-        {/* Hero — compact */}
-        <div className="mb-10 text-center animate-fade-in-up">
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-4 py-1.5 text-sm text-white/50 backdrop-blur-sm">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#7c6cf0] opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#7c6cf0]" />
+      {/* Content */}
+      <main className="relative z-10 flex flex-1 w-full flex-col items-center px-6 pt-10 pb-16">
+        {/* Header Title */}
+        <div className="mb-6 text-center animate-fade-in-up">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-5 py-2 text-sm text-white/60 backdrop-blur-md shadow-lg">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#34d399] opacity-75" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#34d399]" />
             </span>
-            Powered by Soroban on Stellar
+            Stellar Smart Contract (Testnet)
           </div>
 
-          <h1 className="mb-3">
-            <span className="block text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1]">
-              <span className="text-white">Supply Chain </span>
-              <span className="bg-gradient-to-r from-[#7c6cf0] via-[#4fc3f7] to-[#7c6cf0] bg-[length:200%_auto] animate-gradient-shift bg-clip-text text-transparent">
-                on the Blockchain
+          <h1 className="mb-4">
+            <span className="block text-4xl sm:text-6xl font-extrabold tracking-tight leading-[1.1]">
+              <span className="text-white drop-shadow-md">Freelance </span>
+              <span className="bg-gradient-to-r from-accent via-accent-2 to-accent bg-[length:200%_auto] animate-gradient-shift bg-clip-text text-transparent drop-shadow-lg">
+                Escrow
               </span>
             </span>
           </h1>
 
-          <p className="mx-auto max-w-lg text-sm sm:text-base leading-relaxed text-white/40">
-            Register products, track shipments, and verify authenticity — immutably on Stellar.
+          <p className="mx-auto max-w-xl text-base sm:text-lg leading-relaxed text-white/50">
+            Nền tảng thanh toán phi tập trung dành cho Freelancers. An tâm thực hiện công việc với Smart Contract.
           </p>
-
-          {/* Inline stats */}
-          <div className="mt-6 flex items-center justify-center gap-6 sm:gap-10 animate-fade-in-up-delayed">
-            {[
-              { label: "Finality", value: "~5s" },
-              { label: "Cost", value: "<$0.01" },
-              { label: "Network", value: "Testnet" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="text-lg sm:text-xl font-bold text-white/90 font-mono">{stat.value}</p>
-                <p className="text-[10px] text-white/30 mt-0.5">{stat.label}</p>
-              </div>
-            ))}
-          </div>
         </div>
 
-        {/* Contract UI */}
-        <ContractUI
-          walletAddress={walletAddress}
-          onConnect={handleConnect}
-          isConnecting={isConnecting}
-        />
+        {/* Escrow Dashboard UI */}
+        <EscrowDashboard walletAddress={walletAddress} />
 
-        {/* Footer */}
-        <div className="mt-10 flex flex-col items-center gap-4 animate-fade-in">
-          {/* Supply chain flow */}
-          <div className="flex items-center gap-3 text-xs text-white/20">
-            {["Created", "Shipped", "Delivered"].map((step, i) => (
-              <span key={step} className="flex items-center gap-3">
-                <span className="flex items-center gap-1.5">
-                  <span
-                    className={`h-1.5 w-1.5 rounded-full ${
-                      i === 0
-                        ? "bg-[#fbbf24]/50"
-                        : i === 1
-                          ? "bg-[#4fc3f7]/50"
-                          : "bg-[#34d399]/50"
-                    }`}
-                  />
-                  <span className="font-mono">{step}</span>
-                </span>
-                {i < 2 && (
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-white/10">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                )}
-              </span>
-            ))}
-          </div>
-          <div className="flex items-center gap-4 text-[10px] text-white/15">
-            <span>Stellar Network</span>
-            <span className="h-2.5 w-px bg-white/10" />
-            <span>Freighter Wallet</span>
-            <span className="h-2.5 w-px bg-white/10" />
-            <span>Soroban Smart Contracts</span>
+        {/* Footer info */}
+        <div className="mt-16 flex flex-col items-center gap-5 animate-fade-in text-center">
+          <div className="flex items-center gap-5 text-[11px] text-white/20 font-mono uppercase tracking-widest bg-white/[0.02] px-6 py-3 rounded-2xl border border-white/[0.05]">
+            <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-accent/50 text-white shadow-[0_0_10px_rgba(124,108,240,0.5)]"></div>Stellar Network</span>
+            <span className="h-3 w-px bg-white/10" />
+            <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-accent-2/50 text-white shadow-[0_0_10px_rgba(79,195,247,0.5)]"></div>Freighter Wallet</span>
+            <span className="h-3 w-px bg-white/10" />
+            <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-success/50 text-white shadow-[0_0_10px_rgba(52,211,153,0.5)]"></div>Soroban Smart Contracts</span>
           </div>
         </div>
       </main>
