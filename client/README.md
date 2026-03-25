@@ -117,6 +117,6 @@ Sử dụng:
 
 ## 👨‍💻 Author
 
-- **Name:** [Your Name]
+- **Name:** Nguyễn Thế Anh 
 - **Role:** Blockchain Developer
 - **Focus:** Smart Contracts, Web3, Distributed Systems
