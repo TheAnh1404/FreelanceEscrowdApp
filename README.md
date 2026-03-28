@@ -59,7 +59,8 @@ Freelancers thường gặp các vấn đề:
 
 - **Network:** Stellar Testnet
 - **IDE:** [https://stellaride.vercel.app/ide](https://stellaride.vercel.app/ide)
-- **Contract Address (Testnet):** [`CDO47QFLCWZIGST5ECUFRIGBNC2MDUG4T6SQCQ7R7UZTUM4VM7YWNKM2`](https://stellar.expert/explorer/testnet/contract/CDO47QFLCWZIGST5ECUFRIGBNC2MDUG4T6SQCQ7R7UZTUM4VM7YWNKM2)
+- **Contract Address (Testnet 1):** [`CDO47QFLCWZIGST5ECUFRIGBNC2MDUG4T6SQCQ7R7UZTUM4VM7YWNKM2`](https://stellar.expert/explorer/testnet/contract/CDO47QFLCWZIGST5ECUFRIGBNC2MDUG4T6SQCQ7R7UZTUM4VM7YWNKM2)
+- **Contract Address (Testnet 2):** [`CC3DYNYH2VCNEA35DJAXYHY4QNBMOIYMRZIFYEQKWTIPL2DHFRMHFAM7`](https://stellar.expert/explorer/testnet/contract/CC3DYNYH2VCNEA35DJAXYHY4QNBMOIYMRZIFYEQKWTIPL2DHFRMHFAM7)
 - **Transaction (init):** [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/2d6112afcb7adcf240df67f747832b79de427a17ffd2369c342333279ccef3c6)
 - **Token:** USDC (or custom token)
 - **Actors:** 
@@ -69,6 +70,7 @@ Freelancers thường gặp các vấn đề:
 ### 🖥️ Deployment Screenshot
 
 ![Contract Deployment Demo](./demo.png)
+![Contract Deployment Demo 2](./demo2.png)
 
 ## 📦 Smart Contract Functions
 
