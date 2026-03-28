@@ -58,7 +58,7 @@ Freelancers thường gặp các vấn đề:
 ## 🧪 Demo (Testnet)
 
 - **Network:** Stellar Testnet
-- **IDE:** [Stellar IDE](https://stellaride.vercel.app/ide)
+- **IDE:** [https://stellaride.vercel.app/ide](https://stellaride.vercel.app/ide)
 - **Contract Address (Testnet):** [`CDO47QFLCWZIGST5ECUFRIGBNC2MDUG4T6SQCQ7R7UZTUM4VM7YWNKM2`](https://stellar.expert/explorer/testnet/contract/CDO47QFLCWZIGST5ECUFRIGBNC2MDUG4T6SQCQ7R7UZTUM4VM7YWNKM2)
 - **Transaction (init):** [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/2d6112afcb7adcf240df67f747832b79de427a17ffd2369c342333279ccef3c6)
 - **Token:** USDC (or custom token)
@@ -69,7 +69,6 @@ Freelancers thường gặp các vấn đề:
 ### 🖥️ Deployment Screenshot
 
 ![Contract Deployment Demo](./demo.png)
-*(Lưu ý: Bạn hãy lưu bức ảnh screenshot vào thư mục dự án với tên `demo.png` để hiển thị trên Github)*
 
 ## 📦 Smart Contract Functions
 
@@ -96,7 +95,8 @@ cargo build --target wasm32-unknown-unknown --release
 
 Sử dụng:
 - Stellar CLI
-- hoặc Stellar Laboratory
+- Stellar Laboratory
+- **Stellar IDE:** [https://stellaride.vercel.app/ide](https://stellaride.vercel.app/ide) (Khuyên dùng)
 
 ### 4. Test flow
 `init` → `deposit` → `release`
